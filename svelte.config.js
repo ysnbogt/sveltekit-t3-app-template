@@ -11,6 +11,12 @@ const config = {
     adapter: adapter(),
     alias: {
       "@components": "./src/components",
+      "@hooks": "./src/hooks",
+      "@utils": "./src/utils",
+      "@stores": "./src/stores",
+      "@styles": "./src/styles",
+      "@layouts": "./src/layouts",
+      "@typings": "./src/typings",
     },
   },
 }
