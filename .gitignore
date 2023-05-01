@@ -12,3 +12,7 @@ node_modules
 # Prisma
 prisma/migrations
 prisma/dev.db
+
+/test-results/
+/playwright-report/
+/playwright/.cache/
