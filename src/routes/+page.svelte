@@ -1,6 +1,6 @@
 <script lang="ts">
-  import ChevronDown from "../components/ChevronDown.svelte"
-  import SkeletonCard from "../components/SkeletonCard.svelte"
+  import ChevronDown from "@components/ChevronDown.svelte"
+  import SkeletonCard from "@components/SkeletonCard.svelte"
 
   import { page } from "$app/stores"
   import { trpc } from "$lib/trpc/client"
