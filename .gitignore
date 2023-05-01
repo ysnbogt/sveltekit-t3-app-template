@@ -1,0 +1,14 @@
+# Svelte
+/.svelte-kit
+
+# Node
+node_modules
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Prisma
+prisma/migrations
+prisma/dev.db
