@@ -15,7 +15,9 @@
   }
 </script>
 
-<div class="grid grid-cols-4 gap-6">
+<div
+  class="grid justify-center m-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+>
   {#each Array(cards) as _}
     <SkeletonCard />
   {/each}
