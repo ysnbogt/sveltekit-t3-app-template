@@ -8,5 +8,9 @@
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
   "editor.fontFamily": "Courier",
-  "editor.fontSize": 13
+  "editor.fontSize": 13,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

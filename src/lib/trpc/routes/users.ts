@@ -1,7 +1,8 @@
+import { z } from "zod"
+
 import prisma from "$lib/prisma"
 import { logger } from "$lib/trpc/middleware/logger"
 import { t } from "$lib/trpc/t"
-import { z } from "zod"
 
 export const users = t.router({
   list: t.procedure

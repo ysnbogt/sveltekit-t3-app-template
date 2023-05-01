@@ -1,6 +1,7 @@
 <script>
-  import { page } from "$app/stores"
   import UserDropdownMenu from "./UserDropdownMenu.svelte"
+
+  import { page } from "$app/stores"
 </script>
 
 <header>
