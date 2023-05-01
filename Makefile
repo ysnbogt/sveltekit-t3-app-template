@@ -1,4 +1,4 @@
-run:
+run: format
 	npm run dev
 
 format:
