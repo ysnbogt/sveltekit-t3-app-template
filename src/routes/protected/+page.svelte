@@ -10,7 +10,7 @@
 
   const createUser = async () => {
     await trpc()
-      .users.create.query({ name: "test", email: "" })
+      .users.create.query({ name, email })
       .then((user) => {
         console.log(user)
       })

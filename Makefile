@@ -3,3 +3,6 @@ run:
 
 format:
 	npm run format
+
+studio:
+	npx prisma studio

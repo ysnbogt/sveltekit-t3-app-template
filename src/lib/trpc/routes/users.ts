@@ -22,7 +22,7 @@ export const users = t.router({
     .use(logger)
     .input(
       z.object({
-        email: z.string(),
+        email: z.string().email(),
         name: z.string().min(3).max(255),
       })
     )
