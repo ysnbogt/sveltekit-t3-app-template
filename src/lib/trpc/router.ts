@@ -4,8 +4,8 @@ import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server"
 
 export const router = t.router({
   users,
-  greeting: t.procedure.query(async () => {
-    return `Hello tRPC v10 @ ${new Date().toLocaleTimeString()}`
+  cards: t.procedure.query(async () => {
+    return 4
   }),
 })
 

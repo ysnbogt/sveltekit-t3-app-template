@@ -1,32 +1,31 @@
 <script lang="ts">
   import { page } from "$app/stores"
   import { trpc } from "$lib/trpc/client"
+  import SkeletonCard from "../components/SkeletonCard.svelte"
+  import ChevronDown from "../components/ChevronDown.svelte"
 
-  let greeting = "press the button to load data"
+  let cards = 8
   let loading = false
 
   const loadData = async () => {
     loading = true
-    greeting = await trpc($page).greeting.query()
+    cards += await trpc($page).cards.query()
     loading = false
   }
 </script>
 
-<h6>Loading data in<br /><code>+page.svelte</code></h6>
+<div class="grid grid-cols-4 gap-6">
+  {#each Array(cards) as _}
+    <SkeletonCard />
+  {/each}
+</div>
 
-<a
-  href="#load"
-  role="button"
-  class="secondary"
-  aria-busy={loading}
-  on:click|preventDefault={loadData}>Load</a
->
-<p>{greeting}</p>
-
-<h1 class="text-green-400">SvelteKit Auth Example</h1>
-<p>
-  This is an example site to demonstrate how to use <a
-    href="https://kit.svelte.dev/">SvelteKit</a
+<!-- see more -->
+<div class="my-10 text-gray-700 text-center">
+  <button
+    class="secondary"
+    aria-busy={loading}
+    on:click|preventDefault={loadData}>See more</button
   >
-  with <a href="https://sveltekit.authjs.dev">SvelteKit Auth</a> for authentication.
-</p>
+  <ChevronDown />
+</div>

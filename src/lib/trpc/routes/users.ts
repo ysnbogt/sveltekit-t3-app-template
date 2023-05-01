@@ -16,7 +16,9 @@ export const users = t.router({
             },
           },
         })
-        .then((users) => users.map((user) => ({ name: user.name })))
+        .then((users) =>
+          users.map((user) => ({ email: user.email, name: user.name }))
+        )
     ),
   create: t.procedure
     .use(logger)
