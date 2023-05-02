@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["trpc", "octocat", "pbcopy", "tailwindcss", "signin"],
+  "cSpell.words": [
+    "trpc",
+    "octocat",
+    "pbcopy",
+    "tailwindcss",
+    "signin",
+    "supabase"
+  ],
   "[json][jsonc]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
