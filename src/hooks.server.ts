@@ -1,6 +1,8 @@
 import Discord from "@auth/core/providers/discord"
 import GitHub from "@auth/core/providers/github"
 import { SvelteKitAuth } from "@auth/sveltekit"
+import { PrismaAdapter } from "@next-auth/prisma-adapter"
+import { PrismaClient } from "@prisma/client"
 import { sequence } from "@sveltejs/kit/hooks"
 import { createTRPCHandle } from "trpc-sveltekit"
 
@@ -15,8 +17,11 @@ import {
 import { createContext } from "$lib/trpc/context"
 import { router } from "$lib/trpc/router"
 
+const prisma = new PrismaClient()
+
 const trpcHandle: Handle = createTRPCHandle({ router, createContext })
 const authHandle = SvelteKitAuth({
+  adapter: PrismaAdapter(prisma) as any,
   providers: [
     GitHub({
       clientId: GITHUB_CLIENT_ID,

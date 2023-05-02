@@ -1,10 +1,10 @@
 import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server"
 
-import { users } from "$lib/trpc/routes/users"
+import { posts } from "$lib/trpc/routes/posts"
 import { t } from "$lib/trpc/t"
 
 export const router = t.router({
-  users,
+  posts,
   cards: t.procedure.query(async () => {
     return 4
   }),
