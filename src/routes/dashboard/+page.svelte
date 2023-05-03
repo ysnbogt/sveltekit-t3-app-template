@@ -15,6 +15,8 @@
     const user = await trpc().posts.getUserId.query(userEmail)
     userId = user?.id || ""
     posts = await trpc().posts.list.query(userId)
+    title = ""
+    content = ""
   })
 </script>
 
