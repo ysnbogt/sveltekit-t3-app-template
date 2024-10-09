@@ -38,7 +38,7 @@
     "vitest": "^0.31.0"
   },
   "dependencies": {
-    "@auth/core": "^0.7.1",
+    "@auth/core": "^0.37.0",
     "@auth/sveltekit": "^0.3.1",
     "@next-auth/prisma-adapter": "^1.0.6",
     "@prisma/client": "^4.13.0",
